@@ -12,21 +12,24 @@
 	<main class="main">
 		<section class="hello">
 			<p class="hello__bubble">Hello there 👋</p>
-			<img class="hello__profilePic" src="#" alt="Michal Kruszewski profile picture"/>
+			<div class="hello__profile">
+				<img class="hello__profile--picture" src="../../public/mk_profile.jpg" alt="Michal Kruszewski profile picture"/>
+			</div>
 			<section class="hello__greeting">
 				<p class="hello__greeting--header">
-					My name is Michał and I am a .Net Developer. Most of the time (for a living) I am developing applications' backend side but I am trying to develop frontend as good as possible as well. <br/>
-					In my freetime, besides my hobbies which are music and reading a books, I try to learn: other programming languages or frameworks such as Python, Django, Javascript or SASS on higher level, making games with Unity3D and do some electronics with microcontrollers like raspberry pi.
+					My name is Michał and I am a <strong class="hello__greeting--strong">.Net Developer</strong>. <br/>
+					I like sushi 🍣, games 🎮 and everything connected with fantasy. 🐲
 				</p>
 				<p class="hello__greeting--description">
-					Check the list of <b><a href="#skills">my skills</a></b>, 
-					take a look at <b><a href="#projects">my projects</a></b>
-					and if you're looking for developer to hire - <b><a href="#contact">contact me.</a></b> 😊
+					Check the list of <b><a class="hello__greeting--link" href="#skills">my skills</a></b>, 
+					take a look at <b><a class="hello__greeting--link" href="#projects">my projects</a></b>
+					and if you're looking for developer to hire - <b><a class="hello__greeting--link" href="#contact">contact me.</a></b> 😊
 				</p>
-				<a class="hello__greeting--link" href="#">
-					kruszewski2@gmail.com
-				</a>
+				
 			</section>
+			<a class="hello__email" href="#">
+				kruszewski2@gmail.com
+			</a>
 		</section>
 		
 		<section id="skills" class="skills">
