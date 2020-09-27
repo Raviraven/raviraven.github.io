@@ -9,10 +9,36 @@ body {
     background-color: $white_color;
 }
 
+@mixin icon_style {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+}
+
+@mixin skills_header {
+    text-align: center;
+    font-weight: 700;
+    font-size: $header300;
+    line-height: 2.75rem;
+    color: $blue_light_color;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+@mixin skills_item {
+    font-weight: 600;
+    font-size: $list;
+    line-height: $lineheight_skills_item;
+    color: $blue_light_color;
+}
+
 .hello {
     display: flex;
     flex-direction: column;
-    
+    position: relative;
+
     align-items: center;
     padding: 130px 229px 0 229px;
     grid-area: greeting;
@@ -138,8 +164,89 @@ body {
     "contact";
 }
 
+.main > section {
+   min-height: 90vh;
+
+   @media screen and (max-width: $desktop){
+       min-height: auto;
+   }
+}
+
 .skills {
     grid-area: skills;
+    background-color: $bubble_color;
+    color: $white_color;
 
-    
+    min-height: 948px;
+
+    &__column {
+        //width: 428px;
+    }
+
+    // &__column > ul {
+    //     color: $blue_light_color;
+    // }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__header {
+        text-align: center;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    &__knowSomething {
+
+        &--content {
+            list-style: url(../assets/svgs/small_tick_unticked.svg);
+            @include skills_item;
+        }
+
+        &--header {            
+            @include skills_header;
+        }
+
+        &--icon {
+            text-align: center;
+            @include icon_style;
+        }
+    }
+
+    &__workingKnowledge {
+
+        &--content {
+            list-style: url(../assets/svgs/small_tick_ticked.svg);
+            @include skills_item;
+        }
+
+        &--header {
+            @include skills_header;
+        }
+
+        &--icon {
+            text-align: center;
+            @include icon_style;
+        }
+    }
+
+    &__wantLearn {
+
+        &--content {
+            list-style: url(../assets/svgs/bullet.svg);
+            @include skills_item;
+        }
+
+        &--header {
+            @include skills_header;
+        }
+
+        &--icon {
+            text-align: center;
+            @include icon_style;
+        }
+    }
 }
