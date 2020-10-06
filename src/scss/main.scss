@@ -34,6 +34,37 @@ body {
     color: $blue_light_color;
 }
 
+.contact {
+    grid-area: contact;
+    text-align: center;
+    background-color: $blue_light_color;
+
+    &__description {
+        font-weight: 300;
+        font-size: $text;
+        line-height: $lineheight200;
+        color: $text_default_color;
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: $header100;
+        line-height: $lineheight_contact_header;
+        color: $text_dark_color;
+    }
+
+
+    &__socialmedia {
+        margin: 1.5rem 1.5rem;
+
+        &--link {
+            border: 12px solid $white_color;
+            border-radius: 360px;
+        }
+        //text-decoration: none;
+    }
+}
+
 .hello {
     display: flex;
     flex-direction: column;
@@ -173,7 +204,7 @@ body {
 }
 
 .projects {
-
+    grid-area: projects;
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
