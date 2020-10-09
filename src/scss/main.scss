@@ -45,6 +45,11 @@ body {
         line-height: $lineheight200;
         color: $text_default_color;
         margin-top: 2.5rem;
+
+        @media screen and (max-width: $desktop) {
+            font-size: $text_mobile;
+            line-height: $lineheight200_mobile;
+        }
     }
 
     &__header {
@@ -52,12 +57,18 @@ body {
         font-size: $header100;
         line-height: $lineheight_contact_header;
         color: $text_dark_color;
+
+        @media screen and (max-width:$desktop) {
+            font-size: $header100_mobile;
+            line-height: $lineheight100_mobile;
+        }
     }
 
 
     &__socialmedia {
         margin-top: 8rem;
-
+        display: flex;
+        justify-content: center;
 
         &--email {
             margin-left: 110px;
@@ -69,13 +80,23 @@ body {
             text-decoration: none;
             font-weight: bold;
             line-height: $lineheight200;
+
+            @media screen and (max-width:$desktop) {
+                margin: 68px 45px;
+
+            }
         }
 
         &--link {
             border: 12px solid $white_color;
             border-radius: 360px;
+            margin-right: 1.5rem;
         }
         //text-decoration: none;
+
+        @media screen and (max-width:$desktop ) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -89,7 +110,7 @@ body {
     grid-area: greeting;
     
     @media screen and (max-width: $desktop) {
-        padding: 98px 112px 0 112px;        
+        padding: 0;
     }
     
     &__bubble {
@@ -129,6 +150,10 @@ body {
         border-radius: 4rem;
         color: $white_color;
         text-decoration: none;
+
+        @media screen and (max-width: $desktop){
+            margin-top: 3rem;
+        }
     }
     
     &__greeting {
@@ -163,6 +188,10 @@ body {
         &--strong {
             color: $bubble_color;
         }
+
+        @media screen and (max-width: $desktop){
+            padding: 1rem;
+        }
     }
     
     &__greeting::before {
@@ -196,6 +225,15 @@ body {
             width: 178px;
             object-fit: cover;
             border-radius: 360px;
+
+            @media screen and (max-width: $desktop){
+                height: 96px;
+                width: 96px;
+            }
+        }
+
+        @media screen and(max-width: $desktop) {
+            margin-top: 98px;
         }
     }
 }
@@ -223,6 +261,13 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 128px 128px;
+
+        @media screen and (max-width:$desktop ){
+            display: flex;
+            flex-direction: column;
+
+            margin: 2.875rem 1rem;
+        }
     }
 
     &__header {
@@ -237,6 +282,17 @@ body {
             line-height: $lineheight200;
             color: $text_default_color;
             margin-top: 2.5rem;
+
+            @media screen and (max-width: $desktop) {
+                font-size: 1rem;
+                line-height: $lineheight200_mobile;
+            }
+        }
+
+        @media screen and (max-width: $desktop) {
+            margin-top: 4rem;
+            font-size: $header100_mobile;
+            line-height: $lineheight100_mobile;
         }
     }
 
@@ -254,14 +310,15 @@ body {
             display: grid;
             grid-template-columns: 1fr 1fr;
 
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+
             &--key {
                 grid-column: 1;
                 text-align: right;
                 margin-right: 0.25rem;
 
-                font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.5rem;
                 color: $console_grey_4;
             }
 
@@ -271,11 +328,11 @@ body {
 
             &--value {
                 grid-column: 2;
-
-                font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.5rem;
                 color: $console_grey_5;
+            }
+
+            @media screen and (max-width:$desktop) {
+                font-size: 0.8125rem;
             }
         }
 
@@ -303,6 +360,10 @@ body {
                 border-radius: 360px;
             }
         }
+
+        @media screen and (max-width:$desktop) {
+            margin-bottom: 1.5rem;
+        }
     }
 }
 
@@ -312,6 +373,7 @@ body {
     color: $white_color;
 
     min-height: 948px;
+    padding-bottom: 96px;
 
     &__column {
         //width: 428px;
@@ -324,6 +386,10 @@ body {
     &__content {
         display: flex;
         justify-content: space-around;
+
+        @media screen and (max-width: $desktop) {
+            flex-direction: column;
+        }
     }
 
     &__header {
@@ -331,6 +397,12 @@ body {
         font-weight: 700;
         font-size: 3rem;
         line-height: 3.5rem;
+
+        @media screen and (max-width: $desktop) {
+            margin-top: 4rem;
+            font-size: 2.25rem;
+            line-height: 3rem;
+        }
     }
 
     &__knowSomething {
@@ -347,6 +419,10 @@ body {
         &--icon {
             text-align: center;
             @include icon_style;
+        }
+
+        @media screen and (max-width: $desktop){
+            margin-top: 4rem;
         }
     }
 
@@ -365,6 +441,10 @@ body {
             text-align: center;
             @include icon_style;
         }
+
+        @media screen and (max-width: $desktop){
+            margin-top: 4rem;
+        }
     }
 
     &__wantLearn {
@@ -381,6 +461,10 @@ body {
         &--icon {
             text-align: center;
             @include icon_style;
+        }
+
+        @media screen and (max-width: $desktop){
+            margin-top: 4rem;
         }
     }
 }
