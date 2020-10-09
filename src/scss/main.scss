@@ -44,6 +44,7 @@ body {
         font-size: $text;
         line-height: $lineheight200;
         color: $text_default_color;
+        margin-top: 2.5rem;
     }
 
     &__header {
@@ -55,7 +56,20 @@ body {
 
 
     &__socialmedia {
-        margin: 1.5rem 1.5rem;
+        margin-top: 8rem;
+
+
+        &--email {
+            margin-left: 110px;
+            background-color: $text_link_color;
+            padding: 0.25rem 1.5rem;
+            border-radius: 4rem;
+
+            color: $white_color;
+            text-decoration: none;
+            font-weight: bold;
+            line-height: $lineheight200;
+        }
 
         &--link {
             border: 12px solid $white_color;
