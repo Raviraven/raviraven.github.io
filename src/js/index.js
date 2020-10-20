@@ -31,7 +31,7 @@ function createHyperlink(url, urlDesc){
     let htmlElem = `<p class="projects__project--content--url">N/a</p>`;
     if(url != null)
     {
-        htmlElem = `<<a href="${url}" class="projects__project--content--url" target="blank">${urlDesc}</a>>`
+        htmlElem = `&lt;<a href="${url}" title="" class="projects__project--content--url" target="blank">${urlDesc}</a>&gt;`
     }
     return htmlElem;
 }
