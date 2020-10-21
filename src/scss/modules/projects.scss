@@ -1,0 +1,112 @@
+
+.projects {
+    grid-area: projects;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 128px 128px;
+
+        @media screen and (max-width:$desktop ){
+            display: flex;
+            flex-direction: column;
+
+            margin: 2.875rem 1rem;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        font-size: $header100;
+        line-height: $lineheight_projects_header;
+        color: $text_dark_color;
+
+        &--description {
+            font-weight: 300;
+            font-size: $text;
+            line-height: $lineheight200;
+            color: $text_default_color;
+            margin-top: 2.5rem;
+
+            @media screen and (max-width: $desktop) {
+                font-size: 1rem;
+                line-height: $lineheight200_mobile;
+            }
+        }
+
+        @media screen and (max-width: $desktop) {
+            margin-top: 4rem;
+            font-size: $header100_mobile;
+            line-height: $lineheight100_mobile;
+        }
+    }
+
+    &__project {
+        background-color: $console_grey_2;
+        //padding: 1.5rem 1rem;
+        border-radius: 1rem;
+        position: relative;
+        margin: 0.8rem;
+
+        max-width: 580px;
+        
+        &--content {
+            padding: 1.5rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+
+            &--key {
+                grid-column: 1;
+                text-align: right;
+                margin-right: 0.25rem;
+
+                color: $console_grey_4;
+            }
+
+            &--url {
+                color: $console_text_link;
+            }
+
+            &--value {
+                grid-column: 2;
+                color: $console_grey_5;
+            }
+
+            @media screen and (max-width:$desktop) {
+                font-size: 0.8125rem;
+            }
+        }
+
+        &--github {
+            position: absolute;
+            left: 3rem;
+            top: 3.625rem;
+
+            &--svgicon {
+                fill: $white_color;
+            }
+        }
+
+        &--header {
+            height: 40px;
+            background-color: $console_grey_1;
+            margin: 0;
+            border-radius: 1rem;
+
+            &--circle {
+                border: 0.5rem solid $console_grey_3;
+                color: $console_grey_3;
+                //height: 8px;
+                //width: 8px;
+                border-radius: 360px;
+            }
+        }
+
+        @media screen and (max-width:$desktop) {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
