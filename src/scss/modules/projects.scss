@@ -1,16 +1,19 @@
 
 .projects {
     grid-area: projects;
+    padding: 128px 128px;
+
     &__container {
         display: grid;
+        column-gap: 24px;
+        row-gap: 24px;
         grid-template-columns: 1fr 1fr;
-        margin: 128px 128px;
 
-        @media screen and (max-width:$desktop ){
-            display: flex;
-            flex-direction: column;
-
-            margin: 2.875rem 1rem;
+        padding-top:128px;
+        
+        @media screen and (max-width:$tablet){
+            grid-template-columns: 1fr;
+            padding-top:46px;
         }
     }
 
@@ -40,32 +43,36 @@
         }
     }
 
- 
+    @media screen and (max-width: $desktop){
+        padding: 2.875rem 1rem 88px 1rem;
+    }
 }
 
 
 .project {
     background-color: $console_grey_2;
     box-shadow: 0px 0.25rem 1rem rgba(0,0,0,0.25);
-    //padding: 1.5rem 1rem;
     border-radius: 1rem;
-    //position: relative;
-    margin: 0.8rem;
-
     overflow: hidden;
     font-family: 'Roboto Mono';
 
-    max-width: 580px;
+    @media screen and (max-width:$desktop) {
+        
+    }
 
     &__content{
-        padding: 1.5rem 1rem;
+        padding: 24px 48px 58px 48px;
+
+        @media screen and (max-width: $desktop){
+            padding: 1rem 1rem 48px 1rem;
+        }
     }
     
     &__text {
-        //padding: 1.5rem 1rem;
         display: grid;
         grid-template-columns: 116px 1fr;
         column-gap: 0.5rem;
+        margin-top: 24px;
 
         font-weight: 400;
         font-size: 1rem;
@@ -77,6 +84,9 @@
             margin-right: 0.25rem;
 
             color: $console_grey_4;
+            @media screen and (max-width:$desktop){
+                margin: 0.25rem 0;
+            }
         }
 
         &--url {
@@ -86,20 +96,23 @@
         &--value {
             grid-column: 2;
             color: $console_grey_5;
+            &--name{
+                color: $white_color;
+            }
+
+            @media screen and (max-width:$desktop){
+                margin: 0.25rem 0;
+            }
         }
 
         @media screen and (max-width:$desktop) {
+            font-size: 13px;
             grid-template-columns: 102px 1fr;
-            column-gap: 0.5rem;
             font-size: 0.8125rem;
         }
     }
 
-    &--github {
-        position: absolute;
-        left: 3rem;
-        top: 3.625rem;
-
+    &__github {
         &--svgicon {
             fill: $white_color;
         }
@@ -124,9 +137,5 @@
             display: block;
             margin-right: 0.5rem;
         }
-    }
-
-    @media screen and (max-width:$desktop) {
-        margin-bottom: 1.5rem;
     }
 }

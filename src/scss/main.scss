@@ -37,7 +37,7 @@ body {
 }
 
 .main > section {
-   min-height: 90vh;
+   //min-height: 90vh;
 
    @media screen and (max-width: $desktop){
        min-height: auto;

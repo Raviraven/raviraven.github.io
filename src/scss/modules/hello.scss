@@ -8,8 +8,14 @@
     padding: 130px 229px 0 229px;
     grid-area: greeting;
     
-    @media screen and (max-width: $desktop) {
+    @media screen and (max-width: $tablet) {
+    }
+
+    @media screen and (max-width: $desktop){
         padding: 74px 16px 88px;
+
+        max-width: $tablet;
+        margin: 0 auto;
     }
     
     &__bubble {
@@ -57,7 +63,9 @@
     
     &__greeting {
         text-align: center;
-        
+        @media screen and (max-width: $tablet){
+            padding: 1rem;
+        }
         &--description {
             line-height: $lineheight200;
             font-weight: 300;
@@ -87,16 +95,12 @@
         &--strong {
             color: $bubble_color;
         }
-
-        @media screen and (max-width: $desktop){
-            padding: 1rem;
-        }
     }
     
     &__greeting::before {
         content: url(../assets/svgs/bracket_left.svg);
         position: absolute;
-        left: 150px;
+        left: 120px;
         top: 360px;
 
         @media screen and (max-width: $desktop) {
@@ -107,11 +111,11 @@
     &__greeting::after {
         content: url(../assets/svgs/bracket_right.svg);
         position: absolute;
-        right: 150px;
+        right: 120px;
         top: 360px;
 
-        @media screen and (max-width: $desktop) {
-            content:"";
+        @media (max-width:$desktop){
+            content: "";
         }
     }
 

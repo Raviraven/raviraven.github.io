@@ -3,6 +3,7 @@
     grid-area: contact;
     text-align: center;
     background-color: $blue_light_color;
+    padding: 88px 18px 176px;
 
     &__description {
         font-weight: 300;
@@ -24,6 +25,7 @@
         color: $text_dark_color;
 
         @media screen and (max-width:$desktop) {
+            margin: 0;
             font-size: $header100_mobile;
             line-height: $lineheight100_mobile;
         }
@@ -33,34 +35,54 @@
     &__socialmedia {
         margin-top: 8rem;
         display: flex;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
 
         &--email {
-            margin-left: 110px;
             background-color: $text_link_color;
-            padding: 0.25rem 1.5rem;
             border-radius: 4rem;
 
             color: $white_color;
             text-decoration: none;
             font-weight: bold;
             line-height: $lineheight200;
+            padding: 4px 24px;
+
 
             @media screen and (max-width:$desktop) {
-                margin: 68px 45px;
-
             }
         }
 
         &--link {
-            border: 12px solid $white_color;
-            border-radius: 360px;
-            margin-right: 1.5rem;
+            background-color: $white_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(16, 112, 202, 0.15);
+            margin: 0 12px;
         }
-        //text-decoration: none;
+
+        &--socials{
+            display: flex;
+            justify-content: center;
+            margin-right: 110px;
+            
+            @media screen and (max-width: $desktop){
+                margin-right: 0;
+                margin-bottom: 68px;
+            }
+        }
 
         @media screen and (max-width:$desktop ) {
-            flex-direction: column;
+            display: block;
         }
+    }
+
+    @media screen and (max-width:$desktop){
+        padding: 64px 16px 88px;
     }
 }
