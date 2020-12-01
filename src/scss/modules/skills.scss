@@ -1,0 +1,134 @@
+@mixin icon_style {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
+  display: block;
+}
+
+@mixin skills_header {
+  text-align: center;
+  font-weight: 700;
+  font-size: $header300;
+  line-height: 2.75rem;
+  color: $blue_light_color;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+@mixin skills_item {
+  font-weight: 600;
+  font-size: $list;
+  line-height: $lineheight_skills_item;
+  color: $blue_light_color;
+}
+
+.skills {
+  grid-area: skills;
+  background-color: $bubble_color;
+  color: $white_color;
+
+  min-height: 948px;
+  padding: 80px 128px 176px;
+
+  @media(max-width:$tablet){
+    padding: 64px 16px 88px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1184px;
+    margin: 0 auto;
+    padding-top:128px;
+
+
+    @media screen and (max-width: $desktop) {
+      grid-template-columns: 1fr;
+      max-width: auto;
+    }
+  }
+
+  &__header {
+    margin:0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.5rem;
+
+    @media screen and (max-width: $desktop) {
+      //margin-top: 4rem;
+      font-size: 2.25rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+.skillsSection {
+  &__header {
+    text-align: center;
+    font-weight: 700;
+    font-size: $header300;
+    line-height: 2.75rem;
+    color: $blue_light_color;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  &__icon {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+    display: block;
+    text-align: center;
+  }
+
+  &__list {
+    font-size: $list;
+    line-height: $lineheight_skills_item;
+    color: $blue_light_color;
+    list-style-type: none;
+
+    &--item {
+      position: relative;
+      padding: 0 0 0 1.5rem;
+      margin: 0;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 7px;
+        content: "";
+        width: 12px;
+        height: 9px;
+        background: url(../assets/svgs/small_tick_ticked.svg);
+        display: block;
+
+        .skillsSection__list--untick & {
+          background: url(../assets/svgs/small_tick_unticked.svg);
+        }
+
+        .skillsSection__list--dot & {
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          top: 12px;
+          left: 5px;
+          background: $blue_light_color;
+        }
+      }
+
+      @media screen and (max-width: $desktop) {
+      }
+    }
+
+    @media screen and (max-width: $desktop) {
+      width: 288px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+}

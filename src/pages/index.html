@@ -1,183 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Online CV - Michał Kruszewski</title>
 </head>
 <body>
-	
 	<head></head>
 	
 	<main class="main">
 		<section class="hello">
 			<p class="hello__bubble">Hello there 👋</p>
 			<div class="hello__profile">
-				<img class="hello__profile--picture" src="../../public/mk_profile.jpg" alt="Michal Kruszewski profile picture"/>
+				<img
+				class="hello__profile--picture"
+				src="../../public/mk_profile.jpg"
+				alt="Michal Kruszewski profile picture"
+				/>
 			</div>
 			<div class="hello__greeting">
 				<p class="hello__greeting--header">
-					My name is Michał and I am a <strong class="hello__greeting--strong">.Net Developer</strong>. <br/>
+					My name is Michał and I am a
+					<strong class="hello__greeting--strong">.Net Developer</strong>.
+					<br />
 					I like sushi 🍣, games 🎮 and everything connected with fantasy. 🐲
 				</p>
 				<p class="hello__greeting--description">
-					Check the list of <b><a class="hello__greeting--link" href="#skills">my skills</a></b>, 
-					take a look at <b><a class="hello__greeting--link" href="#projects">my projects</a></b>
-					and if you're looking for developer to hire - <b><a class="hello__greeting--link" href="#contact">contact me.</a></b> 😊
-				</p>
-				
-			</div>
-			<a class="hello__email" href="mailto:kruszewski2@gmail.com">
-				kruszewski2@gmail.com
-			</a>
-		</section>
- 		
-		<section id="skills" class="skills">
-			<h3 class="skills__header">My skills</h3>
-			<section class="skills__content">
-				<section class="skills__workingKnowledge skills__column">
-					<p class="skills__workingKnowledge--icon">💪</p>
-					<p class="skills__workingKnowledge--header">
-						Working knowledge
+					Check the list of
+					<b><a class="hello__greeting--link" href="#skills">my skills</a></b
+						>, take a look at
+						<b
+						><a class="hello__greeting--link" href="#projects"
+						>my projects</a
+						></b
+						>
+						and if you're looking for developer to hire -
+						<b
+						><a class="hello__greeting--link" href="#contact"
+						>contact me.</a
+						></b
+						>
+						😊
 					</p>
-					<ul class="skills__workingKnowledge--content">
-						<li>.Net Framework </li>
-						<li>Entity Framework </li>
-						<li>MVC </li>
-						<li>.Net Core </li>
-						<li>HTML </li>
-						<li>xUnit </li>
-						<li>TFS </li>
-						<li>Git </li>
-					</ul> 
 				</section>
-				
-				<section class="skills__knowSomething skills__column">
-					<p class="skills__knowSomething--icon">🤔</p>
-					<p class="skills__knowSomething--header">
-						Know something about
-					</p>
-					<ul class="skills__knowSomething--content">
-						<li>MSSQL </li>
-						<li>CSS </li>
-						<li>SASS </li>
-						<li>Javascript </li>
-						<li>Blazor </li>
-						<li>Django </li>
-						<li>Python </li>
-						<li>Docker </li>
-						<li>WPF </li>
-						<li>Linux </li>
-						<li>Unity </li>
-						<li>Working with API</li>
-						<li>NPM scripts</li>
-					</ul>
-				</section>
-				
-				<section class="skills__wantLearn skills__column">
-					<p class="skills__wantLearn--icon">🎓</p>
-					<p class="skills__wantLearn--header">
-						Want to learn
-					</p>
-					<ul class="skills__wantLearn--content">
-						<li>Angular JS </li>
-						<li>React JS </li>
-						<li>Docker </li>
-						<li>Typescript </li>
-					</ul>
-				</section>
+				<a class="hello__email" href="#"> kruszewski2@gmail.com </a>
 			</section>
-		</section>
-		
-		<section id="projects" class="projects">
-			<header class="projects__header">
-				<h3>Recent projects</h3>
-				<p class="projects__header--description">
-					There should be some quick description...in the future... :V 
-				</p>
-			</header>
-			<section class="projects__container projects__container--js">
-				<section class="projects__project">
-					<header class="projects__project--header">
-						<span class="projects__project--header--circle"></span>
-						<span class="projects__project--header--circle"></span>
-						<span class="projects__project--header--circle"></span>
-					</header>
-					
-					<span class="projects__project--github">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path class="projects__project--github--svgicon" d="M12.0013 1.00403e-06C5.37057 -0.00268026 0 5.36521 0 11.9906C0 17.2298 3.35962 21.6834 8.03843 23.319C8.66853 23.4772 8.572 23.0294 8.572 22.7237V20.6457C4.93353 21.0721 4.78606 18.6643 4.54206 18.2621C4.04871 17.4202 2.88236 17.2057 3.23092 16.8035C4.05943 16.3772 4.90403 16.9107 5.88269 18.3559C6.59055 19.4043 7.9714 19.2274 8.67121 19.0531C8.82404 18.423 9.15116 17.8599 9.60161 17.4229C5.83175 16.7472 4.26053 14.4467 4.26053 11.7118C4.26053 10.3845 4.69758 9.16457 5.55558 8.18054C5.0086 6.55838 5.60652 5.16948 5.68696 4.96302C7.24478 4.8236 8.86426 6.07843 8.99028 6.17764C9.8751 5.939 10.8859 5.81298 12.0174 5.81298C13.1543 5.81298 14.1678 5.94437 15.0607 6.18568C15.3636 5.95509 16.8652 4.87722 18.313 5.0086C18.3908 5.21506 18.9753 6.57178 18.4605 8.1725C19.3292 9.1592 19.7716 10.3899 19.7716 11.7198C19.7716 14.4601 18.1897 16.7633 14.4091 17.4282C14.7329 17.7467 14.99 18.1265 15.1654 18.5454C15.3408 18.9643 15.431 19.414 15.4307 19.8682V22.8846C15.4521 23.1259 15.4307 23.3645 15.8329 23.3645C20.5814 21.7638 24 17.2781 24 11.9933C24 5.36521 18.6267 1.00403e-06 12.0013 1.00403e-06Z" fill="#4DA8FF"/>
-						</svg>
-					</span>
-					
-					<section class="projects__project--content">
-						
-						<p class="projects__project--content--key">project:</p>
-						<p class="projects__project--content--value"><b>project name</b></p>
-						<p class="projects__project--content--key">description:</p>
-						<p class="projects__project--content--value">just a simple description mocked for developer purposes</p>
-						<p class="projects__project--content--key">demo:</p>
-						<p class="projects__project--content--value">&lt;<a href="#" title="project name - demo"  class="projects__project--content--url">see here</a>&gt;</p>
-						<p class="projects__project--content--key">github:</p>
-						<p class="projects__project--content--value">&lt;<a href="#" title="project name - code" class="projects__project--content--url">source code</a>&gt;</p>
-						
+			
+			<section id="skills" class="skills">
+				<h3 class="skills__header">My skills</h3>
+				<section class="skills__content">
+					<section class="skillsSection">
+						<span class="skillsSection__icon">💪</span>
+						<p class="skillsSection__header">Working knowledge</p>
+						<ul class="skillsSection__list">
+							<li class="skillsSection__list--item">.Net Framework</li>
+							<li class="skillsSection__list--item">Entity Framework</li>
+							<li class="skillsSection__list--item">MVC</li>
+							<li class="skillsSection__list--item">.Net Core</li>
+							<li class="skillsSection__list--item">HTML</li>
+							<li class="skillsSection__list--item">xUnit</li>
+							<li class="skillsSection__list--item">TFS</li>
+							<li class="skillsSection__list--item">Git</li>
+						</ul>
 					</section>
-				</section>
-				
-				
-				<section class="projects__project">
-					<header class="projects__project--header">
-						<span class="projects__project--header--circle"></span>
-						<span class="projects__project--header--circle"></span>
-						<span class="projects__project--header--circle"></span>
-					</header>
 					
-					<span class="projects__project--github">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path class="projects__project--github--svgicon" d="M12.0013 1.00403e-06C5.37057 -0.00268026 0 5.36521 0 11.9906C0 17.2298 3.35962 21.6834 8.03843 23.319C8.66853 23.4772 8.572 23.0294 8.572 22.7237V20.6457C4.93353 21.0721 4.78606 18.6643 4.54206 18.2621C4.04871 17.4202 2.88236 17.2057 3.23092 16.8035C4.05943 16.3772 4.90403 16.9107 5.88269 18.3559C6.59055 19.4043 7.9714 19.2274 8.67121 19.0531C8.82404 18.423 9.15116 17.8599 9.60161 17.4229C5.83175 16.7472 4.26053 14.4467 4.26053 11.7118C4.26053 10.3845 4.69758 9.16457 5.55558 8.18054C5.0086 6.55838 5.60652 5.16948 5.68696 4.96302C7.24478 4.8236 8.86426 6.07843 8.99028 6.17764C9.8751 5.939 10.8859 5.81298 12.0174 5.81298C13.1543 5.81298 14.1678 5.94437 15.0607 6.18568C15.3636 5.95509 16.8652 4.87722 18.313 5.0086C18.3908 5.21506 18.9753 6.57178 18.4605 8.1725C19.3292 9.1592 19.7716 10.3899 19.7716 11.7198C19.7716 14.4601 18.1897 16.7633 14.4091 17.4282C14.7329 17.7467 14.99 18.1265 15.1654 18.5454C15.3408 18.9643 15.431 19.414 15.4307 19.8682V22.8846C15.4521 23.1259 15.4307 23.3645 15.8329 23.3645C20.5814 21.7638 24 17.2781 24 11.9933C24 5.36521 18.6267 1.00403e-06 12.0013 1.00403e-06Z" fill="#4DA8FF"/>
-						</svg>
-					</span>
+					<section class="skillsSection">
+						<span class="skillsSection__icon">🤔</span>
+						<p class="skillsSection__header">Know something about</p>
+						<ul class="skillsSection__list skillsSection__list--untick">
+							<li class="skillsSection__list--item">MSSQL</li>
+							<li class="skillsSection__list--item">CSS</li>
+							<li class="skillsSection__list--item">SASS</li>
+							<li class="skillsSection__list--item">Javascript</li>
+							<li class="skillsSection__list--item">Blazor</li>
+							<li class="skillsSection__list--item">Django</li>
+							<li class="skillsSection__list--item">Python</li>
+							<li class="skillsSection__list--item">Docker</li>
+							<li class="skillsSection__list--item">WPF</li>
+							<li class="skillsSection__list--item">Linux</li>
+							<li class="skillsSection__list--item">Unity</li>
+							<li class="skillsSection__list--item">Working with API</li>
+							<li class="skillsSection__list--item">NPM scripts</li>
+						</ul>
+					</section>
 					
-					<section class="projects__project--content">
-						
-						<p class="projects__project--content--key">project:</p>
-						<p class="projects__project--content--value"><b>project name</b></p>
-						<p class="projects__project--content--key">description:</p>
-						<p class="projects__project--content--value">just a simple description mocked for developer purposes</p>
-						<p class="projects__project--content--key">demo:</p>
-						<p class="projects__project--content--value">&lt;<a href="#" title="project name - demo" class="projects__project--content--url">see here</a>&gt;</p>
-						<p class="projects__project--content--key">github:</p>
-						<p class="projects__project--content--value">&lt;<a href="#" title="project name - code" class="projects__project--content--url">source code</a>&gt;</p>
-						
+					<section class="skillsSection">
+						<span class="skillsSection__icon">🎓</span>
+						<p class="skillsSection__header">Want to learn</p>
+						<ul class="skillsSection__list skillsSection__list--dot">
+							<li class="skillsSection__list--item">Angular JS</li>
+							<li class="skillsSection__list--item">React JS</li>
+							<li class="skillsSection__list--item">Docker</li>
+							<li class="skillsSection__list--item">Typescript</li>
+						</ul>
 					</section>
 				</section>
 			</section>
-		</section>
-		
-		<section id="contact" class="contact">
-			<h3 class="contact__header">Contact me</h3>
-			<p class="contact__description">I'm open for new opportunities. If you have one for me we should talk! 😉</p>
-			<section class="contact__socialmedia">
-				<div>
-					<a href="https://github.com/raviraven/" target="blank" class="contact__socialmedia--link">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M12.0013 1.00403e-06C5.37057 -0.00268026 0 5.36521 0 11.9906C0 17.2298 3.35962 21.6834 8.03843 23.319C8.66853 23.4772 8.572 23.0294 8.572 22.7237V20.6457C4.93353 21.0721 4.78606 18.6643 4.54206 18.2621C4.04871 17.4202 2.88236 17.2057 3.23092 16.8035C4.05943 16.3772 4.90403 16.9107 5.88269 18.3559C6.59055 19.4043 7.9714 19.2274 8.67121 19.0531C8.82404 18.423 9.15116 17.8599 9.60161 17.4229C5.83175 16.7472 4.26053 14.4467 4.26053 11.7118C4.26053 10.3845 4.69758 9.16457 5.55558 8.18054C5.0086 6.55838 5.60652 5.16948 5.68696 4.96302C7.24478 4.8236 8.86426 6.07843 8.99028 6.17764C9.8751 5.939 10.8859 5.81298 12.0174 5.81298C13.1543 5.81298 14.1678 5.94437 15.0607 6.18568C15.3636 5.95509 16.8652 4.87722 18.313 5.0086C18.3908 5.21506 18.9753 6.57178 18.4605 8.1725C19.3292 9.1592 19.7716 10.3899 19.7716 11.7198C19.7716 14.4601 18.1897 16.7633 14.4091 17.4282C14.7329 17.7467 14.99 18.1265 15.1654 18.5454C15.3408 18.9643 15.431 19.414 15.4307 19.8682V22.8846C15.4521 23.1259 15.4307 23.3645 15.8329 23.3645C20.5814 21.7638 24 17.2781 24 11.9933C24 5.36521 18.6267 1.00403e-06 12.0013 1.00403e-06Z" fill="#4DA8FF"/>
-						</svg></a>
-					<a href="#" class="contact__socialmedia--link">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M11.997 7.9983C9.79351 7.9983 7.99529 9.79651 7.99529 12C7.99529 14.2035 9.79351 16.0017 11.997 16.0017C14.2005 16.0017 15.9987 14.2035 15.9987 12C15.9987 9.79651 14.2005 7.9983 11.997 7.9983ZM23.9991 12C23.9991 10.3429 24.0141 8.70077 23.9211 7.04665C23.828 5.12536 23.3897 3.4202 21.9847 2.01525C20.5768 0.607302 18.8746 0.172008 16.9533 0.0789456C15.2962 -0.0141173 13.6541 0.000892936 12 0.000892936C10.3429 0.000892936 8.70077 -0.0141173 7.04665 0.0789456C5.12536 0.172008 3.4202 0.610305 2.01525 2.01525C0.607303 3.42321 0.172008 5.12536 0.0789456 7.04665C-0.0141172 8.70377 0.000892936 10.3459 0.000892936 12C0.000892936 13.6541 -0.0141172 15.2992 0.0789456 16.9533C0.172008 18.8746 0.610305 20.5798 2.01525 21.9847C3.42321 23.3927 5.12536 23.828 7.04665 23.9211C8.70377 24.0141 10.3459 23.9991 12 23.9991C13.6571 23.9991 15.2992 24.0141 16.9533 23.9211C18.8746 23.828 20.5798 23.3897 21.9847 21.9847C23.3927 20.5768 23.828 18.8746 23.9211 16.9533C24.0171 15.2992 23.9991 13.6571 23.9991 12ZM11.997 18.1572C8.58969 18.1572 5.83984 15.4073 5.83984 12C5.83984 8.5927 8.58969 5.84284 11.997 5.84284C15.4043 5.84284 18.1542 8.5927 18.1542 12C18.1542 15.4073 15.4043 18.1572 11.997 18.1572ZM18.4063 7.02864C17.6108 7.02864 16.9684 6.38621 16.9684 5.59067C16.9684 4.79513 17.6108 4.1527 18.4063 4.1527C19.2019 4.1527 19.8443 4.79513 19.8443 5.59067C19.8445 5.77957 19.8075 5.96667 19.7353 6.14124C19.6631 6.31581 19.5572 6.47442 19.4237 6.608C19.2901 6.74157 19.1315 6.84748 18.9569 6.91967C18.7823 6.99185 18.5952 7.02888 18.4063 7.02864Z" fill="#4DA8FF"/>
-						</svg></a>
-					<a href="https://www.facebook.com/michalKrusz/" target="blank" class="contact__socialmedia--link">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M24 0H0V24H10.125V16.0312H7.07812V12.5625H10.125V9.91875C10.125 6.91172 11.9156 5.25 14.6578 5.25C15.9703 5.25 17.3438 5.48438 17.3438 5.48438V8.4375H15.8297C14.3391 8.4375 13.875 9.36328 13.875 10.3125V12.5625H17.2031L16.6711 16.0312H13.875V24H24V0Z" fill="#4DA8FF"/>
-						</svg></a>
+			
+			<section id="projects" class="projects">
+				<header class="projects__header">
+					<h3>Recent projects</h3>
+					<p class="projects__header--description">
+						There should be some quick description...in the future... :V
+					</p>
+				</header>
+				<section class="projects__container projects__container--js">
+					<section class="project">
+						<header class="project__header">
+							<span class="project__header--circle"></span>
+							<span class="project__header--circle"></span>
+							<span class="project__header--circle"></span>
+						</header>
+						
+						<div class="project__content">
+							<!-- <img class="project__github" src="../assets/svgs/github.svg" alt=""/> -->
+							<div>
+								<span class="project__github">
+									<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									>
+									<path
+									class="project__github--svgicon"
+									d="M12.0013 1.00403e-06C5.37057 -0.00268026 0 5.36521 0 11.9906C0 17.2298 3.35962 21.6834 8.03843 23.319C8.66853 23.4772 8.572 23.0294 8.572 22.7237V20.6457C4.93353 21.0721 4.78606 18.6643 4.54206 18.2621C4.04871 17.4202 2.88236 17.2057 3.23092 16.8035C4.05943 16.3772 4.90403 16.9107 5.88269 18.3559C6.59055 19.4043 7.9714 19.2274 8.67121 19.0531C8.82404 18.423 9.15116 17.8599 9.60161 17.4229C5.83175 16.7472 4.26053 14.4467 4.26053 11.7118C4.26053 10.3845 4.69758 9.16457 5.55558 8.18054C5.0086 6.55838 5.60652 5.16948 5.68696 4.96302C7.24478 4.8236 8.86426 6.07843 8.99028 6.17764C9.8751 5.939 10.8859 5.81298 12.0174 5.81298C13.1543 5.81298 14.1678 5.94437 15.0607 6.18568C15.3636 5.95509 16.8652 4.87722 18.313 5.0086C18.3908 5.21506 18.9753 6.57178 18.4605 8.1725C19.3292 9.1592 19.7716 10.3899 19.7716 11.7198C19.7716 14.4601 18.1897 16.7633 14.4091 17.4282C14.7329 17.7467 14.99 18.1265 15.1654 18.5454C15.3408 18.9643 15.431 19.414 15.4307 19.8682V22.8846C15.4521 23.1259 15.4307 23.3645 15.8329 23.3645C20.5814 21.7638 24 17.2781 24 11.9933C24 5.36521 18.6267 1.00403e-06 12.0013 1.00403e-06Z"
+									fill="#4DA8FF"
+									/>
+								</svg>
+							</span>
+						</div>
+						
+						<section class="project__text">
+							<p class="project__text--key">project:</p>
+							<p class="project__text--value project__text--value--name"><b>project name</b></p>
+							<p class="project__text--key">description:</p>
+							<p class="project__text--value">
+								just a simple description mocked for developer purposes
+							</p>
+							<p class="project__text--key">demo:</p>
+							<p class="project__text--value">
+								<<a href="#" class="project__text--url"
+								>see here</a
+								>>
+							</p>
+							<p class="project__text--key">github:</p>
+							<p class="project__text--value">
+								<<a href="#" class="project__text--url"
+								>source code</a
+								>>
+							</p>
+						</section>
+					</div>
+				</section>
+				
+				<section class="project">
+					<header class="project__header">
+						<span class="project__header--circle"></span>
+						<span class="project__header--circle"></span>
+						<span class="project__header--circle"></span>
+					</header>
+					
+					<div class="project__content">
+						<!-- <img class="project__github" src="../assets/svgs/github.svg" alt=""/> -->
+						<div>
+							<span class="project__github">
+								<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								>
+								<path
+								class="project__github--svgicon"
+								d="M12.0013 1.00403e-06C5.37057 -0.00268026 0 5.36521 0 11.9906C0 17.2298 3.35962 21.6834 8.03843 23.319C8.66853 23.4772 8.572 23.0294 8.572 22.7237V20.6457C4.93353 21.0721 4.78606 18.6643 4.54206 18.2621C4.04871 17.4202 2.88236 17.2057 3.23092 16.8035C4.05943 16.3772 4.90403 16.9107 5.88269 18.3559C6.59055 19.4043 7.9714 19.2274 8.67121 19.0531C8.82404 18.423 9.15116 17.8599 9.60161 17.4229C5.83175 16.7472 4.26053 14.4467 4.26053 11.7118C4.26053 10.3845 4.69758 9.16457 5.55558 8.18054C5.0086 6.55838 5.60652 5.16948 5.68696 4.96302C7.24478 4.8236 8.86426 6.07843 8.99028 6.17764C9.8751 5.939 10.8859 5.81298 12.0174 5.81298C13.1543 5.81298 14.1678 5.94437 15.0607 6.18568C15.3636 5.95509 16.8652 4.87722 18.313 5.0086C18.3908 5.21506 18.9753 6.57178 18.4605 8.1725C19.3292 9.1592 19.7716 10.3899 19.7716 11.7198C19.7716 14.4601 18.1897 16.7633 14.4091 17.4282C14.7329 17.7467 14.99 18.1265 15.1654 18.5454C15.3408 18.9643 15.431 19.414 15.4307 19.8682V22.8846C15.4521 23.1259 15.4307 23.3645 15.8329 23.3645C20.5814 21.7638 24 17.2781 24 11.9933C24 5.36521 18.6267 1.00403e-06 12.0013 1.00403e-06Z"
+								fill="#4DA8FF"
+								/>
+							</svg>
+						</span>
+					</div>
+					
+					<section class="project__text">
+						<p class="project__text--key">project:</p>
+						<p class="project__text--value project__text--value--name"><b>project name</b></p>
+						<p class="project__text--key">description:</p>
+						<p class="project__text--value">
+							just a simple description mocked for developer purposes
+						</p>
+						<p class="project__text--key">demo:</p>
+						<p class="project__text--value">
+							<<a href="#" class="project__text--url"
+							>see here</a
+							>>
+						</p>
+						<p class="project__text--key">github:</p>
+						<p class="project__text--value">
+							<<a href="#" class="project__text--url"
+							>source code</a
+							>>
+						</p>
+					</section>
 				</div>
-				<a href="#" class="contact__socialmedia--email">kruszewski2@gmail.com</a>
+			
+			</section>
+
+
+			<section class="project">
+				<header class="project__header">
+					<span class="project__header--circle"></span>
+					<span class="project__header--circle"></span>
+					<span class="project__header--circle"></span>
+				</header>
+				
+				<div class="project__content">
+					<!-- <img class="project__github" src="../assets/svgs/github.svg" alt=""/> -->
+					<div>
+						<span class="project__github">
+							<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							>
+							<path
+							class="project__github--svgicon"
+							d="M12.0013 1.00403e-06C5.37057 -0.00268026 0 5.36521 0 11.9906C0 17.2298 3.35962 21.6834 8.03843 23.319C8.66853 23.4772 8.572 23.0294 8.572 22.7237V20.6457C4.93353 21.0721 4.78606 18.6643 4.54206 18.2621C4.04871 17.4202 2.88236 17.2057 3.23092 16.8035C4.05943 16.3772 4.90403 16.9107 5.88269 18.3559C6.59055 19.4043 7.9714 19.2274 8.67121 19.0531C8.82404 18.423 9.15116 17.8599 9.60161 17.4229C5.83175 16.7472 4.26053 14.4467 4.26053 11.7118C4.26053 10.3845 4.69758 9.16457 5.55558 8.18054C5.0086 6.55838 5.60652 5.16948 5.68696 4.96302C7.24478 4.8236 8.86426 6.07843 8.99028 6.17764C9.8751 5.939 10.8859 5.81298 12.0174 5.81298C13.1543 5.81298 14.1678 5.94437 15.0607 6.18568C15.3636 5.95509 16.8652 4.87722 18.313 5.0086C18.3908 5.21506 18.9753 6.57178 18.4605 8.1725C19.3292 9.1592 19.7716 10.3899 19.7716 11.7198C19.7716 14.4601 18.1897 16.7633 14.4091 17.4282C14.7329 17.7467 14.99 18.1265 15.1654 18.5454C15.3408 18.9643 15.431 19.414 15.4307 19.8682V22.8846C15.4521 23.1259 15.4307 23.3645 15.8329 23.3645C20.5814 21.7638 24 17.2781 24 11.9933C24 5.36521 18.6267 1.00403e-06 12.0013 1.00403e-06Z"
+							fill="#4DA8FF"
+							/>
+						</svg>
+					</span>
+				</div>
+				
+				<section class="project__text">
+					<p class="project__text--key">project:</p>
+					<p class="project__text--value project__text--value--name"><b>project name</b></p>
+					<p class="project__text--key">description:</p>
+					<p class="project__text--value">
+						just a simple description mocked for developer purposes
+					</p>
+					<p class="project__text--key">demo:</p>
+					<p class="project__text--value">
+						<<a href="#" class="project__text--url"
+						>see here</a
+						>>
+					</p>
+					<p class="project__text--key">github:</p>
+					<p class="project__text--value">
+						<<a href="#" class="project__text--url"
+						>source code</a
+						>>
+					</p>
+				</section>
+			</div>
+		
+		</section>
+		</section>
+	</section>
+	
+	<section id="contact" class="contact">
+		<h3 class="contact__header">Contact me</h3>
+		<p class="contact__description">
+			I'm open for new opportunities. If you have one for me we should talk!
+			😉
+		</p>
+		<section class="contact__socialmedia">
+			<div class="contact__socialmedia--socials">
+				<a href="https://github.com/raviraven/"	target="blank" class="contact__socialmedia--link"
+				><img src="../assets/svgs/github.svg" alt=""/></a>
+				
+				<a href="#" class="contact__socialmedia--link">
+					<img src="../assets/svgs/instagram.svg" alt=""/></a>
+					<a
+					href="https://www.facebook.com/michalKrusz/"
+					target="blank"
+					class="contact__socialmedia--link">
+					<img src="../assets/svgs/facebook.svg" alt=""/></a>
+				</div>
+				<a href="#" class="contact__socialmedia--email"
+				>kruszewski2@gmail.com</a
+				>
 			</section>
 		</section>
 	</main>
 	
 	<footer class="footer"></footer>
-	
 </body>
 </html>

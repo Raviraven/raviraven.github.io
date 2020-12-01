@@ -1,0 +1,88 @@
+
+.contact {
+    grid-area: contact;
+    text-align: center;
+    background-color: $blue_light_color;
+    padding: 88px 18px 176px;
+
+    &__description {
+        font-weight: 300;
+        font-size: $text;
+        line-height: $lineheight200;
+        color: $text_default_color;
+        margin-top: 2.5rem;
+
+        @media screen and (max-width: $desktop) {
+            font-size: $text_mobile;
+            line-height: $lineheight200_mobile;
+        }
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: $header100;
+        line-height: $lineheight_contact_header;
+        color: $text_dark_color;
+
+        @media screen and (max-width:$desktop) {
+            margin: 0;
+            font-size: $header100_mobile;
+            line-height: $lineheight100_mobile;
+        }
+    }
+
+
+    &__socialmedia {
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &--email {
+            background-color: $text_link_color;
+            border-radius: 4rem;
+
+            color: $white_color;
+            text-decoration: none;
+            font-weight: bold;
+            line-height: $lineheight200;
+            padding: 4px 24px;
+
+
+            @media screen and (max-width:$desktop) {
+            }
+        }
+
+        &--link {
+            background-color: $white_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(16, 112, 202, 0.15);
+            margin: 0 12px;
+        }
+
+        &--socials{
+            display: flex;
+            justify-content: center;
+            margin-right: 110px;
+            
+            @media screen and (max-width: $desktop){
+                margin-right: 0;
+                margin-bottom: 68px;
+            }
+        }
+
+        @media screen and (max-width:$desktop ) {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:$desktop){
+        padding: 64px 16px 88px;
+    }
+}
