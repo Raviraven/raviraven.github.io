@@ -45,6 +45,30 @@
         }
     }
 
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        font-size: 1.125rem;
+        
+        &--hidden{
+            display: none;
+        }
+
+        & > span {
+            margin: 0 0.25rem;
+            cursor: pointer;
+        }
+        & > span.projects__pagination--active {
+            text-decoration: underline;
+            font-size: $text;
+        }
+        & > span.projects__pagination--arrow {
+            align-self: center;
+            font-size: 0.75rem;
+        }
+    }
+
     @media screen and (max-width: $desktop){
         padding: 2.875rem 1rem 88px 1rem;
     }

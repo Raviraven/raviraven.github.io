@@ -4,7 +4,11 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   /* here you can define another js file */
   entry: {
+    //include babel for asynchronus functions
+    babel: "babel-polyfill",
     index: "./src/js/index.js",
+    pagination: "./src/js/pagination.js",
+    repositories: "./src/js/repositories.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -18,7 +22,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ["@babel/preset-env", ],
           },
         },
       },
@@ -78,7 +82,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index"],
+      //"index",
+      chunks: ["babel", "index"],
       filename: "index.html",
     }),
   ],
