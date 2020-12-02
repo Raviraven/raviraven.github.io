@@ -8,14 +8,10 @@ fetch("https://api.github.com/users/raviraven/repos")
     .then((response) => response.json())
     .then((response) => {
         for(const repo of response) {
-            //if(repo.description == null) return;
-
-            console.log(`repo name: ${repo.name}`);
-            console.log(`description: ${repo.description}`);
-            console.log(`demo: ${repo.homepage}`);
-            console.log(`github: ${repo.html_url}`);
-
-            createProjectContainer(createProjectSection(repo.name, repo.description, repo.homepage, repo.html_url));
+            if(repo.description != null) {
+                const {name, description, homepage, html_url} = repo;
+                createProjectContainer(createProjectSection(name, description, homepage, html_url));
+            }
         }
     })
     .catch((error) =>{
