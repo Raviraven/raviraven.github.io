@@ -1,7 +1,7 @@
 
 .projects {
     grid-area: projects;
-    padding: 128px 128px;
+    padding: 80px 128px 176px 128px;
 
     &__container {
         display: grid;
@@ -22,24 +22,26 @@
         font-size: $header100;
         line-height: $lineheight_projects_header;
         color: $text_dark_color;
+        margin: 0;
+        
+        @media screen and (max-width: $desktop) {
+            font-size: $header100_mobile;
+            line-height: $lineheight100_mobile;
+        }
 
         &--description {
             font-weight: 300;
             font-size: $text;
             line-height: $lineheight200;
             color: $text_default_color;
-            margin-top: 2.5rem;
+            margin: 2.5rem 0 0 0;
+            text-align: center;
 
             @media screen and (max-width: $desktop) {
+                margin-top:32px;
                 font-size: 1rem;
                 line-height: $lineheight200_mobile;
             }
-        }
-
-        @media screen and (max-width: $desktop) {
-            margin-top: 4rem;
-            font-size: $header100_mobile;
-            line-height: $lineheight100_mobile;
         }
     }
 
