@@ -55,15 +55,17 @@
             display: none;
         }
 
-        & > span {
+        & > a {
             margin: 0 0.25rem;
-            cursor: pointer;
+            color: $console_grey_4;
+            //cursor: pointer;
+            text-decoration: none;
         }
-        & > span.projects__pagination--active {
+        & > a.projects__pagination--active {
             text-decoration: underline;
             font-size: $text;
         }
-        & > span.projects__pagination--arrow {
+        & > a.projects__pagination--arrow {
             align-self: center;
             font-size: 0.75rem;
         }

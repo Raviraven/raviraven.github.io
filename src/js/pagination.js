@@ -23,7 +23,7 @@ function getTotalPages()
     let total = repositoriesArray.length / reposPerPage;
     if(total < 1) return 1;
     else if (total % 1 === 0) return total;
-    else return total + 0.5;
+    else return parseInt(total) + 1;
 }
 
 function loadPageByNumber(nextPage)
@@ -84,6 +84,6 @@ function getPaginationHtml(totalPages, currentPage){
 }
 
 function createSinglePageSpan(spanText, spanClass, onclick){
-    let pageSpan = `<span class="${spanClass}" onclick="${onclick}">${spanText}</span>`;
+    let pageSpan = `<a href="#projects-container" class="${spanClass}" onclick="${onclick}">${spanText}</a>`;
     return pageSpan;
 }
