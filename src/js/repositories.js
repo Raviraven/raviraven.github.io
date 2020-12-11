@@ -34,8 +34,8 @@ async function getReposArray(){
 
     let reposArray=[];
     for(const repo of reposJSON){
-        // if(repo.description != null){
-        if(true){
+        if(repo.description != null){
+        // if(true){
             const {name, description, homepage, html_url} = repo;
             let object = {
                 'name': name,
@@ -50,8 +50,9 @@ async function getReposArray(){
 }
 
 function createHyperlink(url, urlDesc){
+    console.log(url)
     let htmlElem = `<span class="project__text--url">N/a</span>`;
-    if(url != null)
+    if(url != null && url != "")
     {
         htmlElem = `&lt;<a href="${url}" title="" class="project__text--url" target="_blank" rel="noopener noreferrer">${urlDesc}</a>&gt;`
     }

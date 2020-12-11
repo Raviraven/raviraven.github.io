@@ -40,7 +40,7 @@ function addDataIntoHtml(repositoriesContainer, dataToInsertArray)
     repositoriesContainer.innerHTML = "";
     dataToInsertArray.forEach(element => {
         repositoriesContainer.innerHTML += 
-            createProjectSection(element.name, element.description, element.demo_url, element.github_url);
+            createProjectSection(element.name, element.description, element.homepage, element.html_url);
     });
 }
 
