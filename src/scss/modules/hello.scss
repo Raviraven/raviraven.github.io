@@ -1,3 +1,15 @@
+@keyframes wavingHand {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform:  rotate(40deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 
 .hello {
     display: flex;
@@ -36,6 +48,12 @@
         @media screen and (max-width: $desktop) {
             display: none;
         }
+
+        &--hand {
+            display: inline-block;
+            animation: wavingHand 0.6s ease 2;
+            transform-origin: right bottom;
+        }
     }
     
     &__bubble::after {
@@ -56,8 +74,14 @@
         color: $white_color;
         text-decoration: none;
 
+        transition: transform 0.3s ease-in-out;
+
         @media screen and (max-width: $desktop){
             margin-top: 3rem;
+        }
+
+        &:hover {
+            transform: scale(1.05);
         }
     }
     

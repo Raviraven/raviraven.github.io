@@ -48,9 +48,14 @@
             font-weight: bold;
             line-height: $lineheight200;
             padding: 4px 24px;
-
+            
+            transition: transform 0.3s ease-in-out;
 
             @media screen and (max-width:$desktop) {
+            }
+            
+            &:hover {
+                transform: scale(1.05);
             }
         }
 
@@ -64,6 +69,12 @@
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(16, 112, 202, 0.15);
             margin: 0 12px;
+
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
 
         &--socials{
