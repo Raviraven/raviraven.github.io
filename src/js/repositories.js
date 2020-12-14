@@ -1,31 +1,11 @@
 export { createProjectSection, getReposArray }
 
-//const projectContainer = document.querySelector('.projects__container--js');
-
 async function getRepositoriesFromGithub(){
     
     const r = await fetch("https://api.github.com/users/raviraven/repos")
-    //.then((response) => response.json())
-    // .then((response) => {
-    //     for(const repo of response) {
-    //         // if(repo.description != null) {
-    //         if(true){
-    //             const {name, description, homepage, html_url} = repo;
-    //             let object = {
-    //                 'name': name,
-    //                 'description': description,
-    //                 'homepage': homepage,
-    //                 'html_url': html_url 
-    //             };
-    //             reposArray.push("dupa");
-    //             //createProjectContainer(createProjectSection(name, description, homepage, html_url));
-    //         }
-    //     }
-    // })
     .catch((error) =>{
         console.log(error);
     })
-    //console.log(await r.json());
     return r.json();
 }
 
@@ -50,7 +30,6 @@ async function getReposArray(){
 }
 
 function createHyperlink(url, urlDesc){
-    console.log(url)
     let htmlElem = `<span class="project__text--url">N/a</span>`;
     if(url != null && url != "")
     {

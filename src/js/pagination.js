@@ -15,7 +15,6 @@ async function paginationSetup()
     repositoriesArray = await getReposArray();
     totalPages = getTotalPages();
     loadPageByNumber(currentPage);
-   // addPagesIntoHtml(totalPages, currentPage);
 }
 
 function getTotalPages()
