@@ -56,6 +56,7 @@
     font-weight: 700;
     font-size: 3rem;
     line-height: 3.5rem;
+    color:$blue_light_color;
 
     @media screen and (max-width: $desktop) {
       //margin-top: 4rem;
@@ -117,12 +118,13 @@
         }
 
         .skillsSection__list--dot & {
-          width: 2px;
-          height: 2px;
-          border-radius: 50%;
-          top: 12px;
-          left: 5px;
-          background: $blue_light_color;
+          // width: 2px;
+          // height: 2px;
+          // border-radius: 50%;
+          // top: 12px;
+          // left: 5px;
+          // background: $blue_light_color;
+          background: url(../assets/svgs/small_tick_want_learn.svg);
         }
       }
 
