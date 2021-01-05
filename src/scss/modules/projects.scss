@@ -1,169 +1,166 @@
-
 .projects {
-    grid-area: projects;
-    padding: 80px 128px 176px 128px;
+  grid-area: projects;
+  padding: 80px 128px 176px 128px;
 
-    &__container {
-        display: grid;
-        column-gap: 24px;
-        row-gap: 24px;
-        grid-template-columns: 1fr 1fr;
+  &__container {
+    display: grid;
+    column-gap: 24px;
+    row-gap: 24px;
+    grid-template-columns: 1fr 1fr;
 
-        padding-top:128px;
-        
-        @media screen and (max-width:$tablet){
-            grid-template-columns: 1fr;
-            padding-top:46px;
-        }
+    padding-top: 128px;
+
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      padding-top: 46px;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    font-size: $header100;
+    line-height: $lineheight_projects_header;
+    color: $text_dark_color;
+    margin: 0;
+
+    @media screen and (max-width: $desktop) {
+      font-size: $header100_mobile;
+      line-height: $lineheight100_mobile;
     }
 
-    &__header {
-        text-align: center;
-        font-size: $header100;
-        line-height: $lineheight_projects_header;
-        color: $text_dark_color;
-        margin: 0;
-        
-        @media screen and (max-width: $desktop) {
-            font-size: $header100_mobile;
-            line-height: $lineheight100_mobile;
-        }
+    &--description {
+      font-weight: 300;
+      font-size: $text;
+      line-height: $lineheight200;
+      color: $text_default_color;
+      margin: 2.5rem 0 0 0;
+      text-align: center;
 
-        &--description {
-            font-weight: 300;
-            font-size: $text;
-            line-height: $lineheight200;
-            color: $text_default_color;
-            margin: 2.5rem 0 0 0;
-            text-align: center;
+      @media screen and (max-width: $desktop) {
+        margin-top: 32px;
+        font-size: 1rem;
+        line-height: $lineheight200_mobile;
+      }
+    }
+  }
 
-            @media screen and (max-width: $desktop) {
-                margin-top:32px;
-                font-size: 1rem;
-                line-height: $lineheight200_mobile;
-            }
-        }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    font-size: 1.125rem;
+
+    &--hidden {
+      display: none;
     }
 
-    &__pagination {
-        display: flex;
-        justify-content: center;
-        padding-top: 2rem;
-        font-size: 1.125rem;
-        
-        &--hidden{
-            display: none;
-        }
-
-        & > a {
-            margin: 0 0.25rem;
-            color: $console_grey_4;
-            //cursor: pointer;
-            text-decoration: none;
-        }
-        & > a.projects__pagination--active {
-            text-decoration: underline;
-            font-size: $text;
-        }
-        & > a.projects__pagination--arrow {
-            align-self: center;
-            font-size: 0.75rem;
-        }
+    & > a {
+      margin: 0 0.25rem;
+      color: $console_grey_4;
+      //cursor: pointer;
+      text-decoration: none;
     }
-
-    @media screen and (max-width: $desktop){
-        padding: 2.875rem 1rem 88px 1rem;
+    & > a.projects__pagination--active {
+      text-decoration: underline;
+      font-size: $text;
     }
+    & > a.projects__pagination--arrow {
+      align-self: center;
+      font-size: 0.75rem;
+    }
+  }
+
+  @media screen and (max-width: $desktop) {
+    padding: 2.875rem 1rem 88px 1rem;
+  }
 }
 
-
 .project {
-    background-color: $console_grey_2;
-    box-shadow: 0px 0.25rem 1rem rgba(0,0,0,0.25);
+  background-color: $console_grey_2;
+  box-shadow: 0px 0.25rem 1rem rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: "Roboto Mono";
+
+  @media screen and (max-width: $desktop) {
+  }
+
+  &__content {
+    padding: 24px 48px 58px 48px;
+
+    @media screen and (max-width: $desktop) {
+      padding: 1rem 1rem 48px 1rem;
+    }
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: 116px 1fr;
+    column-gap: 0.5rem;
+    margin-top: 24px;
+
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    &--key {
+      grid-column: 1;
+      text-align: right;
+      margin-right: 0.25rem;
+
+      color: $console_grey_4;
+      @media screen and (max-width: $desktop) {
+        margin: 0.25rem 0;
+      }
+    }
+
+    &--url {
+      color: $console_text_link;
+    }
+
+    &--value {
+      grid-column: 2;
+      color: $console_grey_5;
+      &--name {
+        color: $white_color;
+      }
+
+      @media screen and (max-width: $desktop) {
+        margin: 0.25rem 0;
+      }
+    }
+
+    @media screen and (max-width: $desktop) {
+      font-size: 13px;
+      grid-template-columns: 102px 1fr;
+      font-size: 0.8125rem;
+    }
+  }
+
+  &__github {
+    &--svgicon {
+      fill: $white_color;
+    }
+  }
+
+  &__header {
+    height: 40px;
+    background-color: $console_grey_1;
+    margin: 0;
     border-radius: 1rem;
-    overflow: hidden;
-    font-family: 'Roboto Mono';
 
-    @media screen and (max-width:$desktop) {
-        
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 1rem;
+
+    &--circle {
+      // border: 0.5rem solid $console_grey_3;
+      background: $console_grey_3;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      display: block;
+      margin-right: 0.5rem;
     }
-
-    &__content{
-        padding: 24px 48px 58px 48px;
-
-        @media screen and (max-width: $desktop){
-            padding: 1rem 1rem 48px 1rem;
-        }
-    }
-    
-    &__text {
-        display: grid;
-        grid-template-columns: 116px 1fr;
-        column-gap: 0.5rem;
-        margin-top: 24px;
-
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.5rem;
-
-        &--key {
-            grid-column: 1;
-            text-align: right;
-            margin-right: 0.25rem;
-
-            color: $console_grey_4;
-            @media screen and (max-width:$desktop){
-                margin: 0.25rem 0;
-            }
-        }
-
-        &--url {
-            color: $console_text_link;
-        }
-
-        &--value {
-            grid-column: 2;
-            color: $console_grey_5;
-            &--name{
-                color: $white_color;
-            }
-
-            @media screen and (max-width:$desktop){
-                margin: 0.25rem 0;
-            }
-        }
-
-        @media screen and (max-width:$desktop) {
-            font-size: 13px;
-            grid-template-columns: 102px 1fr;
-            font-size: 0.8125rem;
-        }
-    }
-
-    &__github {
-        &--svgicon {
-            fill: $white_color;
-        }
-    }
-
-    &__header {
-        height: 40px;
-        background-color: $console_grey_1;
-        margin: 0;
-        border-radius: 1rem;
-
-        display: flex;
-        align-items: center;
-        padding: 0 0 0 1rem;
-
-        &--circle {
-            // border: 0.5rem solid $console_grey_3;
-            background: $console_grey_3;
-            height: 8px;
-            width: 8px;
-            border-radius: 50%;
-            display: block;
-            margin-right: 0.5rem;
-        }
-    }
+  }
 }

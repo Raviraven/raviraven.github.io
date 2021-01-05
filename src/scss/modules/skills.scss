@@ -32,7 +32,7 @@
   min-height: 948px;
   padding: 80px 128px 176px;
 
-  @media(max-width:$tablet){
+  @media (max-width: $tablet) {
     padding: 64px 16px 88px;
   }
 
@@ -43,7 +43,6 @@
     margin: 0 auto;
     padding-top: 128px;
 
-
     @media screen and (max-width: $desktop) {
       grid-template-columns: 1fr;
       padding-top: 0;
@@ -51,12 +50,12 @@
   }
 
   &__header {
-    margin:0;
+    margin: 0;
     text-align: center;
     font-weight: 700;
     font-size: 3rem;
     line-height: 3.5rem;
-    color:$blue_light_color;
+    color: $blue_light_color;
 
     @media screen and (max-width: $desktop) {
       //margin-top: 4rem;
@@ -67,8 +66,7 @@
 }
 
 .skillsSection {
-
-  @media (max-width: $tablet){
+  @media (max-width: $tablet) {
     padding-top: 64px;
   }
 

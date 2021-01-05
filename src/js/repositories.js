@@ -1,48 +1,47 @@
-export { createProjectSection, getReposArray }
+export { createProjectSection, getReposArray };
 
-async function getRepositoriesFromGithub(){
-    
-    const r = await fetch("https://api.github.com/users/raviraven/repos")
-    .catch((error) =>{
-        console.log(error);
-    })
-    return r.json();
-}
-
-async function getReposArray(){
-    let reposJSON = await getRepositoriesFromGithub();
-
-    let reposArray=[];
-    for(const repo of reposJSON){
-        if(repo.description != null){
-        // if(true){
-            const {name, description, homepage, html_url} = repo;
-            let object = {
-                'name': name,
-                'description': description,
-                'homepage': homepage,
-                'html_url': html_url 
-            };
-            reposArray.push(object);
-        }
+async function getRepositoriesFromGithub() {
+  const r = await fetch("https://api.github.com/users/raviraven/repos").catch(
+    (error) => {
+      console.log(error);
     }
-    return reposArray;
+  );
+  return r.json();
 }
 
-function createHyperlink(url, urlDesc){
-    let htmlElem = `<span class="project__text--url">N/a</span>`;
-    if(url != null && url != "")
-    {
-        htmlElem = `&lt;<a href="${url}" title="" class="project__text--url" target="_blank" rel="noopener noreferrer">${urlDesc}</a>&gt;`
+async function getReposArray() {
+  let reposJSON = await getRepositoriesFromGithub();
+
+  let reposArray = [];
+  for (const repo of reposJSON) {
+    if (repo.description != null) {
+      // if(true){
+      const { name, description, homepage, html_url } = repo;
+      let object = {
+        name: name,
+        description: description,
+        homepage: homepage,
+        html_url: html_url,
+      };
+      reposArray.push(object);
     }
-    return htmlElem;
+  }
+  return reposArray;
 }
 
-function createProjectSection(name, description, demo_url, github_url){
-    let demoDesc = `see here`;
-    let githubDesc = `source code`;
-    
-    let project_section = `
+function createHyperlink(url, urlDesc) {
+  let htmlElem = `<span class="project__text--url">N/a</span>`;
+  if (url != null && url != "") {
+    htmlElem = `&lt;<a href="${url}" title="" class="project__text--url" target="_blank" rel="noopener noreferrer">${urlDesc}</a>&gt;`;
+  }
+  return htmlElem;
+}
+
+function createProjectSection(name, description, demo_url, github_url) {
+  let demoDesc = `see here`;
+  let githubDesc = `source code`;
+
+  let project_section = `
     <section class="project">
     <header class="project__header">
     <span class="project__header--circle"></span>
@@ -89,5 +88,5 @@ function createProjectSection(name, description, demo_url, github_url){
     
     </section>
     `;
-    return project_section;
+  return project_section;
 }

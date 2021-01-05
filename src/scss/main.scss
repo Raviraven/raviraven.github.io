@@ -2,35 +2,33 @@
 
 @import "_variables";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 
 @import "modules/hello.scss";
 @import "modules/contact.scss";
 @import "modules/projects.scss";
 @import "modules/skills.scss";
 
-
-
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
-*:after{
-    box-sizing: inherit;
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-    font-family: "Nunito", sans-serif;
-    font-size: $text;
-    background-color: $white_color;
+  font-family: "Nunito", sans-serif;
+  font-size: $text;
+  background-color: $white_color;
 }
 
 .main {
-    display: grid;
-    grid-template-areas:
+  display: grid;
+  grid-template-areas:
     "greeting"
     "skills"
     "projects"
@@ -38,9 +36,9 @@ body {
 }
 
 .main > section {
-   //min-height: 90vh;
+  //min-height: 90vh;
 
-   @media screen and (max-width: $desktop){
-       min-height: auto;
-   }
+  @media screen and (max-width: $desktop) {
+    min-height: auto;
+  }
 }

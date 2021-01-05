@@ -1,169 +1,168 @@
 @keyframes wavingHand {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform:  rotate(40deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-
 .hello {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-    align-items: center;
-    padding: 130px 229px 176px 229px;
-    grid-area: greeting;
-    
+  align-items: center;
+  padding: 130px 229px 176px 229px;
+  grid-area: greeting;
+
+  @media screen and (max-width: $tablet) {
+  }
+
+  @media screen and (max-width: $desktop) {
+    padding: 74px 16px 88px;
+
+    max-width: $tablet;
+    margin: 0 auto;
+  }
+
+  &__bubble {
+    font-size: $header200;
+    font-weight: 700;
+    line-height: $lineheight200;
+
+    background-color: $bubble_color;
+    padding: 1rem 1.188rem;
+    border-radius: 1rem;
+
+    color: $white_color;
+
+    position: absolute;
+    left: calc(50% + 120px);
+    top: 50px;
+
+    @media screen and (max-width: $desktop) {
+      display: none;
+    }
+
+    &--hand {
+      display: inline-block;
+      animation: wavingHand 0.6s ease 2;
+      transform-origin: right bottom;
+    }
+  }
+
+  &__bubble::after {
+    content: url(../assets/svgs/speech_cloud.svg);
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    color: $bubble_color;
+  }
+
+  &__email {
+    background-color: $text_link_color;
+    line-height: $lineheight200;
+    font-weight: 700;
+
+    margin: 24px;
+    padding: 4px 24px;
+    border-radius: 4rem;
+    color: $white_color;
+    text-decoration: none;
+
+    transition: transform 0.3s ease-in-out;
+
+    @media screen and (max-width: $desktop) {
+      margin-top: 3rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__greeting {
+    text-align: center;
     @media screen and (max-width: $tablet) {
+      padding: 1rem;
+    }
+    &--description {
+      line-height: $lineheight200;
+      font-weight: 300;
+      color: $text_default_color;
+
+      @media screen and (max-width: $desktop) {
+        font-size: $text_mobile;
+        line-height: $lineheight200_mobile;
+      }
+    }
+    &--header {
+      font-size: $header200;
+      font-weight: 700;
+      line-height: $lineheight200;
+      color: $text_dark_color;
+
+      @media screen and (max-width: $desktop) {
+        font-size: $header200_mobile;
+        line-height: $lineheight200_mobile;
+      }
+    }
+    &--link {
+      font-weight: bold;
+      text-decoration-line: underline;
+      color: $text_link_color;
+    }
+    &--strong {
+      color: $bubble_color;
+    }
+  }
+
+  &__greeting::before {
+    content: url(../assets/svgs/bracket_left.svg);
+    position: absolute;
+    left: 120px;
+    top: 360px;
+
+    @media screen and (max-width: $desktop) {
+      content: "";
+    }
+  }
+
+  &__greeting::after {
+    content: url(../assets/svgs/bracket_right.svg);
+    position: absolute;
+    right: 120px;
+    top: 360px;
+
+    @media (max-width: $desktop) {
+      content: "";
+    }
+  }
+
+  &__profile {
+    border: 1.5rem solid $picture_radius_color;
+    border-radius: 360px;
+    line-height: 0;
+
+    &--picture {
+      box-sizing: content-box;
+      height: 178px;
+      width: 178px;
+      object-fit: cover;
+      border-radius: 360px;
+
+      @media screen and (max-width: $desktop) {
+        height: 96px;
+        width: 96px;
+      }
     }
 
-    @media screen and (max-width: $desktop){
-        padding: 74px 16px 88px;
-
-        max-width: $tablet;
-        margin: 0 auto;
+    @media screen and(max-width: $desktop) {
+      //margin-top: 98px;
     }
-    
-    &__bubble {
-        font-size: $header200;
-        font-weight: 700;
-        line-height: $lineheight200;
-        
-        background-color: $bubble_color;
-        padding: 1rem 1.188rem;
-        border-radius: 1rem;
-        
-        color: $white_color;
-        
-        position: absolute;
-        left: calc(50% + 120px);
-        top: 50px;
-        
-        @media screen and (max-width: $desktop) {
-            display: none;
-        }
-
-        &--hand {
-            display: inline-block;
-            animation: wavingHand 0.6s ease 2;
-            transform-origin: right bottom;
-        }
-    }
-    
-    &__bubble::after {
-        content: url(../assets/svgs/speech_cloud.svg);
-        position: absolute;
-        top: 60px;
-        left: 20px;
-        color: $bubble_color;
-    }
-
-    &__email {
-        background-color: $text_link_color;
-        line-height: $lineheight200;
-        font-weight: 700;
-        
-        margin: 24px;
-        padding: 4px 24px;
-        border-radius: 4rem;
-        color: $white_color;
-        text-decoration: none;
-
-        transition: transform 0.3s ease-in-out;
-
-        @media screen and (max-width: $desktop){
-            margin-top: 3rem;
-        }
-
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-    
-    &__greeting {
-        text-align: center;
-        @media screen and (max-width: $tablet){
-            padding: 1rem;
-        }
-        &--description {
-            line-height: $lineheight200;
-            font-weight: 300;
-            color: $text_default_color;
-            
-            @media screen and (max-width: $desktop) {
-                font-size: $text_mobile;
-                line-height: $lineheight200_mobile;
-            }
-        }
-        &--header {
-            font-size: $header200;
-            font-weight: 700;
-            line-height: $lineheight200;
-            color: $text_dark_color;
-            
-            @media screen and (max-width: $desktop) {
-                font-size: $header200_mobile;
-                line-height: $lineheight200_mobile;
-            }
-        }
-        &--link {
-            font-weight: bold;
-            text-decoration-line: underline;
-            color: $text_link_color;
-        }
-        &--strong {
-            color: $bubble_color;
-        }
-    }
-    
-    &__greeting::before {
-        content: url(../assets/svgs/bracket_left.svg);
-        position: absolute;
-        left: 120px;
-        top: 360px;
-
-        @media screen and (max-width: $desktop) {
-            content:"";
-        }
-    }
-
-    &__greeting::after {
-        content: url(../assets/svgs/bracket_right.svg);
-        position: absolute;
-        right: 120px;
-        top: 360px;
-
-        @media (max-width:$desktop){
-            content: "";
-        }
-    }
-
-    &__profile {
-        border: 1.5rem solid $picture_radius_color;
-        border-radius: 360px;
-        line-height: 0;
-        
-        &--picture{
-            box-sizing: content-box;
-            height: 178px;
-            width: 178px;
-            object-fit: cover;
-            border-radius: 360px;
-
-            @media screen and (max-width: $desktop){
-                height: 96px;
-                width: 96px;
-            }
-        }
-
-        @media screen and(max-width: $desktop) {
-            //margin-top: 98px;
-        }
-    }
+  }
 }
