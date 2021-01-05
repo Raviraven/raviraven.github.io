@@ -9,7 +9,7 @@
         font-weight: 300;
         font-size: $text;
         line-height: $lineheight200;
-        color: $text_default_color;
+        color: $text_contact_color;
         margin-top: 2.5rem;
 
         @media screen and (max-width: $desktop) {
@@ -22,7 +22,7 @@
         font-weight: 700;
         font-size: $header100;
         line-height: $lineheight_contact_header;
-        color: $text_dark_color;
+        color: $text_contact_color;
 
         @media screen and (max-width:$desktop) {
             margin: 0;

@@ -61,6 +61,7 @@
         position: absolute;
         top: 60px;
         left: 20px;
+        color: $bubble_color;
     }
 
     &__email {
@@ -146,6 +147,7 @@
     &__profile {
         border: 1.5rem solid $picture_radius_color;
         border-radius: 360px;
+        line-height: 0;
         
         &--picture{
             box-sizing: content-box;
