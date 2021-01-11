@@ -1,5 +1,5 @@
 # Online CV
-"Online CV" is a simple webpage created during [WTF: Co ten frontend]() course.  
+"Online CV" is a simple webpage created during [WTF: Co ten frontend](https://cotenfrontend.pl/) course.  
 It contains my skills, and listed my github repositories.  
 Check it on your own! 😉
 
