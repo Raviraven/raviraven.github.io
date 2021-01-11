@@ -1,0 +1,4 @@
+
+img[src*="#skills_mobile"] {
+    height: 100px;
+}
